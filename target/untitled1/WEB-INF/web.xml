@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation=
+                 "http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>Students personnel</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <description></description>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>WelcomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>RegistrationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MainFrameServlet</servlet-name>
+        <servlet-class>MainFrameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainFrameServlet</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MainModeratorFrameServlet</servlet-name>
+        <servlet-class>MainModeratorFrameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainModeratorFrameServlet</servlet-name>
+        <url-pattern>/mainmoderator</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MainAdminFrameServlet</servlet-name>
+        <servlet-class>MainAdminFrameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainAdminFrameServlet</servlet-name>
+        <url-pattern>/mainadmin</url-pattern>
+    </servlet-mapping>
+
+</web-app>
