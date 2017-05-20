@@ -5,6 +5,7 @@
 <head>
     <title>SPD</title>
     <style>
+        #lblError{margin-top: -2px; color: red; margin-left: 125px; font-size: 21px;}
         body{background-color: #c5ddff;background-image: url("static/images/i1.gif");}
         #panel{width: 99.7%;height: 47px;background: #fff5b2;border-style: groove;}
         #btnLogOut:hover{background-color: #3c4a90;color: white;}
@@ -80,7 +81,7 @@
                     <td><p id="lblN">Username:<input class="lblT" name="lblN" type="text"/><br/></td>
                 </tr>
                 <tr>
-                    <td><p id="lblP">Password:<input class="lblT" name="lblP" type="text"/><br/></td>
+                    <td><p id="lblP">Password:<input class="lblT" name="lblP" type="password"/><br/></td>
                 </tr>
                 <tr>
                     <td><p id="lblS">Status:<select class="lblT" name = "lblS">
@@ -90,6 +91,9 @@
                 </tr>
                 <tr>
                     <td><input id="btnAdd" type="submit" value="Add" name="Add"/></td>
+                </tr>
+                <tr>
+                    <td><p id="lblError">${logIn}</p></td>
                 </tr>
             </table>
         </div>

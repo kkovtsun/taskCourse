@@ -14,13 +14,6 @@ public class UserType {
         this.status = status;
     }
 
-    public UserType(int id, String username, String password, String status) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.status = status;
-    }
-
     public int getId() {
         return id;
     }

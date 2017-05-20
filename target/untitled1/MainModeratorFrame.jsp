@@ -7,6 +7,9 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <title>SPD</title>
     <style>
+        #lblError{margin-top: 5px;  color: red; margin-left: 43px;  font-size: 21px;}
+        #lblError2{margin-top: -27px; color: red;  margin-left: 66px; font-size: 21px;}
+        #lblError3{margin-top: -3px; color: red;  margin-left: 28px; font-size: 21px;}
         body{background-color: #c5ddff;background-image: url("static/images/i1.gif");}
         #btnLogOut, #btnSearch, #btnMove, #btnAddGr, #btnEditGrFinaly, #btnEditGr, #btnDelGr,
         #btnAddSt, #btnEditSt, #btnDelSt, #btnEditStFinaly, #btnAddDp, #btnEditDp, #btnDelDp, #btnEditDpFinaly{
@@ -213,6 +216,9 @@
                     <td><p id="lblID"><input name="lblID" type="text" value="${student.studentId}"/></td>
                     <td><input id="btnEditStFinaly" type="submit" value="Do edit" name="EditFinaly"/></td>
                 </tr>
+                <tr>
+                    <td><p id="lblError">${logIn}</p></td>
+                </tr>
             </table>
         </div>
     </div>
@@ -244,7 +250,7 @@
                     <td><input id="btnDelGr" type="submit" value="Delete group" name="DeleteGr"/></td>
                 </tr>
                 <tr>
-                    <td><p id="lblGrN">Name:<input id="lblGrNT" name="lblGrN" type="text" value="${groupE.nameGroup}"/><br/></td>
+                    <td><p id="lblGrN">Name:<input id="lblGrNT" name="lblGrN" type="number" value="${groupE.nameGroup}"/><br/></td>
                     <td><p id="lblGrC">Curator:<input id="lblGrCT" name="lblGrC" type="text" value="${groupE.curator}"/><br/></td>
                     <td><p id="lblGrS">Specialty:<input id="lblGrST" name="lblGrS" type="text" value="${groupE.speciality}"/><br/></td>
                     <td><p id="lblGrH">Head Sp:<input id="lblGrHT" name="lblGrH" type="text" value="${groupE.speHead}"/><br/></td>
@@ -252,6 +258,9 @@
                 <tr>
                     <td><p id="lblGrID"><input name="lblGrID" type="text" value="${groupE.groupId}"/></td>
                     <td><input id="btnEditGrFinaly" type="submit" value="Do edit" name="EditFinalyGr"/></td>
+                </tr>
+                <tr>
+                    <td><p id="lblError2">${logIn2}</p></td>
                 </tr>
             </table>
         </div>
@@ -287,6 +296,9 @@
                 <tr>
                     <td><p id="lblDpID"><input name="lblDpID" type="text" value="${department.departmentId}"/></td>
                     <td><input id="btnEditDpFinaly" type="submit" value="Do edit" name="EditFinalyDp"/></td>
+                </tr>
+                <tr>
+                    <td><p id="lblError3">${logIn3}</p></td>
                 </tr>
             </table>
         </div>
