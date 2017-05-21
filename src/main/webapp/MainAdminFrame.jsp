@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>SPD</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <style>
         #lblError{margin-top: -2px; color: red; margin-left: 125px; font-size: 21px;}
         body{background-color: #c5ddff;background-image: url("static/images/i1.gif");}
@@ -38,7 +39,27 @@
         #lblN{margin-left: 60px;}
         #lblP{margin-left: 63px;}
         #lblS{margin-left: 85px;}
+        #btnDel:disabled, #btnDelA:disabled{
+            border-color: #c1bebe;
+            color: #7f7575;
+        }
     </style>
+    <script>
+        $(function() {
+            $("#btnDel").attr("disabled", true);
+            $("#btnDelA").attr("disabled", true);
+            $(".rdBtnM").click(function () {
+                $("#btnDel").attr("disabled", false);
+                $("#btnDelA").attr("disabled", true);
+            });
+            $(".rdBtnA").click(function () {
+                $("#btnDel").attr("disabled", true);
+                $("#btnDelA").attr("disabled", false);
+            });
+        });
+
+
+    </script>
 </head>
 <body>
 <form action="<c:url value="/mainadmin"/>" method="POST">
@@ -57,7 +78,7 @@
                 </tr>
                 <c:forEach var="moderator" items="${moderators}">
                     <tr>
-                        <td><input id="rdBtnM" type="radio" name="id" value="${moderator.id}"></td>
+                        <td><input class="rdBtnM" type="radio" name="id" value="${moderator.id}"></td>
                         <td><c:out value="${moderator.username}"/></td>
                         <td><c:out value="${moderator.password}"/></td>
                         <td><c:out value="${moderator.status}"/></td>
@@ -65,7 +86,7 @@
                 </c:forEach>
                 <c:forEach var="admin" items="${admins}">
                     <tr>
-                        <td><input id="rdBtnA" type="radio" name="id" value="${admin.id}"></td>
+                        <td><input class="rdBtnA" type="radio" name="id" value="${admin.id}"></td>
                         <td><c:out value="${admin.username}"/></td>
                         <td><c:out value="${admin.password}"/></td>
                         <td><c:out value="${admin.status}"/></td>

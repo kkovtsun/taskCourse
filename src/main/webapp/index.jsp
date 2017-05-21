@@ -6,11 +6,6 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <title>SPD</title>
     <style>
-        #btn:disabled{
-            border-color: #c1bebe;
-            color: #e8dddd;
-            background-color: rgba(128, 128, 128, 0.08);
-        }
          body{background-color: #c5ddff;background-image: url("static/images/i1.gif");}
         #txt1{margin-left: 10px;cursor: pointer;}
         #txt2{margin-left: 15px;cursor: pointer;}

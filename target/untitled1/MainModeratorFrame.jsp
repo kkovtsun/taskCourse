@@ -82,18 +82,18 @@
         #lblDT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
         #lblST{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 116px;
             margin-top: 5px;}
-        #btnEditStFinaly{margin-left: -63px;}
+        #btnEditStFinaly{margin-left: -68px; margin-top: 5px;}
         #tblGModerC{width: 93.2%;margin-left: 18px;border-color: #ece5e5;
             margin-top: 16px;margin-bottom: 5px;
             background: #fff5b2;border-style: groove;}
         #btnAddGr{float: left;margin-left: 27px;margin-top: 10px;}
-        #btnEditGr{margin-top: 10px;margin-left: -57px;float: left;}
+        #btnEditGr{margin-top: 10px;margin-left: -33px;float: left;}
         #btnDelGr{margin-top: 10px;margin-left: -74px;float: left;}
         #lblGrN{margin-top: -22px;margin-left: 17px;}
         #lblGrC{margin-left: -225px;margin-top: 40px;}
         #lblGrS{margin-left: -169px;margin-top: -22px;}
-        #lblGrH{margin-left: -224px;margin-top: 35px;}
-        #btnEditGrFinaly{margin-bottom: 7px;margin-left: 93px;}
+        #lblGrH{margin-left: -224px;margin-top: 38px;}
+        #btnEditGrFinaly{margin-bottom: 7px;margin-left: 93px;margin-top: 4px;}
         #tblD{float: left;width: 22%;}
         #tblDI{margin-left: 73px;margin-top: 13px;}
         #tblSM{margin-bottom:16px;margin-top: 16px;
@@ -110,8 +110,33 @@
         #lblDpN{margin-left: 8px;margin-top: -45px;}
         #lblDpH{margin-left: -248px;margin-top: 62px;}
         #lblHEAD{margin-left: -167px;margin-top: 20px;}
+        #btnDelSt:disabled, #btnDelGr:disabled, #btnDelDp:disabled, #btnEditSt:disabled, #btnEditGr:disabled,#btnEditDp:disabled {
+            border-color: #c1bebe;
+            color: #7f7575;
+        }
     </style>
-    <script>$(function(){$("#lblID").hide(); $("#lblGrID").hide(); $("#lblDpID").hide();});</script>
+    <script>
+        $(function(){
+            $("#btnDelSt").attr("disabled", true);
+            $("#btnDelGr").attr("disabled", true);
+            $("#btnDelDp").attr("disabled", true);
+            $("#btnEditSt").attr("disabled", true);
+            $("#btnEditGr").attr("disabled", true);
+            $("#btnEditDp").attr("disabled", true);
+            $(".rdBtn").click(function () {
+                $("#btnDelSt").attr("disabled", false);
+                $("#btnEditSt").attr("disabled", false);
+            });
+            $(".rdBtnG").click(function () {
+                $("#btnDelGr").attr("disabled", false);
+                $("#btnEditGr").attr("disabled", false);
+            });
+            $(".rdBtnD").click(function () {
+                $("#btnDelDp").attr("disabled", false);
+                $("#btnEditDp").attr("disabled", false);
+            });
+        $("#lblID").hide(); $("#lblGrID").hide(); $("#lblDpID").hide();});
+    </script>
 </head>
 <body>
 <form action="<c:url value="/mainmoderator"/>" method="POST">
@@ -185,7 +210,7 @@
                 </tr>
                 <c:forEach var="student" items="${form.students}">
                     <tr>
-                        <td><input id="rdBtn" type="radio" name="studentId" value="${student.studentId}"></td>
+                        <td><input class="rdBtn" type="radio" name="studentId" value="${student.studentId}"></td>
                         <td><c:out value="${student.firstName}"/></td>
                         <td><c:out value="${student.surName}"/></td>
                         <td><c:out value="${student.patronymic}"/></td>
@@ -235,7 +260,7 @@
                 </tr>
                 <c:forEach var="group" items="${form.groups}">
                     <tr>
-                        <td><input id="rdBtnG" type="radio" name="grId" value="${group.groupId}"></td>
+                        <td><input class="rdBtnG" type="radio" name="grId" value="${group.groupId}"></td>
                         <td><c:out value="${group.nameGroup}"/></td>
                         <td><c:out value="${group.curator}"/></td>
                         <td><c:out value="${group.speciality}"/></td>
@@ -276,7 +301,7 @@
                 </tr>
                 <c:forEach var="department" items="${form.departments}">
                     <tr>
-                        <td><input id="rdBtnD" type="radio" name="dpId" value="${department.departmentId}"></td>
+                        <td><input class="rdBtnD" type="radio" name="dpId" value="${department.departmentId}"></td>
                         <td><c:out value="${department.nameDept}"/></td>
                         <td><c:out value="${department.head}"/></td>
                     </tr>
