@@ -11,20 +11,20 @@
 
     <servlet>
         <description></description>
-        <servlet-name>WelcomeUser</servlet-name>
-        <servlet-class>WelcomeUser</servlet-class>
+        <servlet-name>WelcomeUserFrame</servlet-name>
+        <servlet-class>WelcomeUserFrame</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>WelcomeUser</servlet-name>
+        <servlet-name>WelcomeUserFrame</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>RegistrationUser</servlet-name>
-        <servlet-class>RegistrationUser</servlet-class>
+        <servlet-name>RegistrationUserFrame</servlet-name>
+        <servlet-class>RegistrationUserFrame</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>RegistrationUser</servlet-name>
+        <servlet-name>RegistrationUserFrame</servlet-name>
         <url-pattern>/registration</url-pattern>
     </servlet-mapping>
 

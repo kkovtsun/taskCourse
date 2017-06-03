@@ -21,36 +21,38 @@
         #deptSearch{font-size: 23px;margin-left: 40px;margin-top: 2px;}
         #groupSearch{margin-left: 45px;margin-top: 3px;font-size: 23px;}
         #txtYearSearch{margin-left: -50px;margin-top: -48px;cursor: pointer;
-            border: 2px solid #3c4a90;font-size: 15px;}
+            border: 2px solid #9a9a9a;font-size: 15px;}
         #txtDeprSearch{width: 100px;margin-left: 200px;
-            margin-top: -48px;cursor: pointer;border: 2px solid #3c4a90;
+            margin-top: -48px;cursor: pointer;border: 2px solid #9a9a9a;
             font-size: 15px;}
         #txtGroupSearch{width: 100px;margin-left: 162px;
-            margin-top: -48px;cursor: pointer;border: 2px solid #3c4a90;
+            margin-top: -48px;cursor: pointer;border: 2px solid #9a9a9a;
             font-size: 15px;}
+        tr:hover{color: #3c4a90;}
+        th, td {text-align: left; padding: 3px;}
+        tr:nth-child(even){background-color: #f2f2f2}
+        #txtYearSearch:hover, #txtDeprSearch:hover, #txtGroupSearch:hover {border-color:  #221c70;}
         #btnSearch{margin-left: 148px;margin-top: -22px;}
         #divSearch{height: 45px;}
         #listSearch{color: #221c70;font-size: 21px;margin-left: 37px;}
         #listGroups{color: #221c70;font-size: 21px;margin-left: 218px;}
         #listDepartment{color: #221c70;font-size: 21px;margin-left: 24px;}
         .title{font-size: 18px;color: rgb(22, 18, 74);}
-        #tblS{height: 100%;width: 35%;float: left;}
-        #tblSI{margin-left: 24px;margin-top: 14px;}
-        #tblG{float: left;width: 44%;height: 100%;}
-        #tblGI{margin-top: 14px;
-            margin-left: 33px;}
-        #tblD{float: left;width: 19%;height: 100%;}
-        #tblDI{margin-left: 71px;margin-top: 13px;}
+        #tblS{width: 35%;float: left;}
+        #tblSI{margin-left: 11px;margin-top: 14px;margin-bottom: 16px;}
+        #tblG{float: left;width: 44%;}
+        #tblGI{margin-top: 14px; margin-left: 26px;margin-bottom: 16px;}
+        #tblD{float: left;width: 19%;}
+        #tblDI{margin-left: 50px;margin-top: 13px;margin-bottom: 16px;}
         #tblSM{margin-bottom:16px;margin-top: 16px;
-            border-style: groove;height: 100%;background: white;
+            border-style: groove;background: white;
             width: 435px;margin-left: 15px;}
         #tblDM{margin-top: 16px;margin-bottom:16px; width: 96%;
-            border-style: groove;margin-left: 16px;background: white;height: 100%;}
-        #tblGM{margin-top: 16px;margin-bottom:16px; background: white;height: 100%;
+            border-style: groove;margin-left: 16px;background: white;}
+        #tblGM{margin-top: 16px;margin-bottom:16px; background: white;
             border-style: groove;}
     </style>
 </head>
-
 <body>
 <form action="<c:url value="/main"/>" method="POST">
     <div id="panel">

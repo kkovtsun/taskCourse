@@ -28,11 +28,12 @@
         #deptSearch{font-size: 23px;margin-left: 40px;margin-top: 2px;}
         #groupSearch{margin-left: 45px;margin-top: 3px;font-size: 23px;}
         #txtYearSearch{margin-left: -50px;margin-top: -48px;cursor: pointer;
-            border: 2px solid #3c4a90;font-size: 15px;}
+            border: 2px solid #9a9a9a;font-size: 15px;}
         #txtDeprSearch{width: 100px;margin-left: 200px;
-            margin-top: -48px;cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;}
+            margin-top: -48px;cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;}
         #txtGroupSearch{width: 100px;margin-left: 162px;
-            margin-top: -48px;cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;}
+            margin-top: -48px;cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;}
+        #txtYearSearch:hover, #txtDeprSearch:hover, #txtGroupSearch:hover {border-color:  #221c70;}
         #btnSearch{margin-left: 148px;margin-top: -22px;}
         #divSearch{height: 45px;}
         #studentPartMove{float: right;width: 627px;
@@ -40,9 +41,10 @@
         #tblMove{}
         #yearSearchM{font-size: 20px;margin-left: 21px;margin-top: -19px;}
         #groupSearchM{font-size: 20px;margin-left: 30px;margin-top: -2px;}
-        #txtYearSearchM{margin-left: 11px;cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;}
+        #txtYearSearchM{margin-left: 11px;cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;}
         #txtGroupSearchM{width: 100px;margin-left: 128px;margin-top: -41px;
-            cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;}
+            cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;}
+        #txtYearSearchM:hover, #txtGroupSearchM:hover {border-color:  #221c70;}
         #lblMoveM{margin-left: 25px;font-size: 19px;}
         #btnMove{margin-top: -20px;margin-left: 19px;}
         #listSearch{color: #221c70;font-size: 21px;margin-left: 37px;}
@@ -62,48 +64,54 @@
             margin-left: 10px;border-color: #ece5e5;
             margin-top: 16px;margin-bottom: 5px;
             background: #fff5b2;border-style: groove;}
-        #btnAddSt{}
-        #btnEditSt{margin-left: -54px;}
-        #btnDelSt{margin-left: -115px; }
+        .thUI, .tdUI {text-align: left; padding: 3px;}
+        .trUI:nth-child(even){background-color: #f2f2f2}
+        #btnAddSt{margin-top: 7px;}
+        #btnEditSt{margin-left: -54px;margin-top: 7px;}
+        #btnDelSt{margin-left: -115px;margin-top: 7px;}
         #lblL{ margin-left: 10px;}
         #lblF{ margin-left: 10px;}
         #lblP{margin-left: 10px;}
         #lblD{margin-left: 10px;}
         #lblS{margin-left: 10px;}
-        #lblDpHT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
-        #lblDpNT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
-        #lblGrCT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
-        #lblGrHT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
-        #lblGrNT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
-        #lblGrST{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
-        #lblLT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
-        #lblFT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
-        #lblPT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
-        #lblDT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
-        #lblST{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 116px;
+        #lblDpHT{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        #lblDpNT{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        #lblGrCT{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        #lblGrHT{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        #lblGrNT{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        #lblGrST{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        #lblLT{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        #lblFT{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        #lblPT{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        #lblDT{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        #lblST{cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 116px;
             margin-top: 5px;}
+        #lblDpHT:hover, #lblDpNT:hover, #lblDpCT:hover {border-color:  #221c70;}
+        #lblGrCT:hover, #lblGrHT:hover, #lblGrNT:hover {border-color:  #221c70;}
+        #lblGrST:hover, #lblLT:hover, #lblFT:hover {border-color:  #221c70;}
+        #lblPT:hover, #lblDT:hover, #lblST:hover {border-color:  #221c70;}
         #btnEditStFinaly{margin-left: -68px; margin-top: 5px;}
         #tblGModerC{width: 93.2%;margin-left: 18px;border-color: #ece5e5;
             margin-top: 16px;margin-bottom: 5px;
             background: #fff5b2;border-style: groove;}
-        #btnAddGr{float: left;margin-left: 27px;margin-top: 10px;}
-        #btnEditGr{margin-top: 10px;margin-left: -33px;float: left;}
-        #btnDelGr{margin-top: 10px;margin-left: -74px;float: left;}
+        #btnAddGr{float: left;margin-left: 13px;margin-top: 7px;}
+        #btnEditGr{margin-top: 7px; width: 124px;margin-left: -44px;float: left;}
+        #btnDelGr{margin-top: 7px;margin-left: -74px;float: left;}
         #lblGrN{margin-top: -22px;margin-left: 17px;}
         #lblGrC{margin-left: -225px;margin-top: 40px;}
         #lblGrS{margin-left: -169px;margin-top: -22px;}
         #lblGrH{margin-left: -224px;margin-top: 38px;}
-        #btnEditGrFinaly{margin-bottom: 7px;margin-left: 93px;margin-top: 4px;}
+        #btnEditGrFinaly{margin-bottom: 24px;margin-left: 93px;margin-top: 4px;}
         #tblD{float: left;width: 22%;}
-        #tblDI{margin-left: 73px;margin-top: 13px;}
+        #tblDI{margin-left: 59px;margin-top: 13px;}
         #tblSM{margin-bottom:16px;margin-top: 16px;
             border-style: groove;background: white;
             width: 435px;margin-left: 15px;}
         #tblDM{margin-top: 16px;margin-bottom:16px; width: 96%;
             border-style: groove;margin-left: 16px;background: white;}
-        #btnAddDp{margin-top: -24px;margin-left: 5px;}
-        #btnEditDp{margin-top: -24px;margin-left: -18px;}
-        #btnDelDp{margin-left: -118px;margin-top: 36px;}
+        #btnAddDp{margin-top: -24px;margin-left: 5px;width: 116px;}
+        #btnEditDp{width: 112px;margin-top: -25px;margin-left: -37px;}
+        #btnDelDp{margin-left: -118px;margin-top: 43px;}
         #tblDModerC{margin-bottom: 5px;margin-right: 6px;margin-left: 6px;
             background: #fff5b2;border: groove;margin-top: 20px;}
         #btnEditDpFinaly{margin-left: -6px;margin-top: -32px;}
@@ -111,9 +119,8 @@
         #lblDpH{margin-left: -248px;margin-top: 62px;}
         #lblHEAD{margin-left: -167px;margin-top: 20px;}
         #btnDelSt:disabled, #btnDelGr:disabled, #btnDelDp:disabled, #btnEditSt:disabled, #btnEditGr:disabled,#btnEditDp:disabled {
-            border-color: #c1bebe;
-            color: #7f7575;
-        }
+            border-color: #3c4a90; color: rgba(127, 117, 117, 0.55)}
+        .trUI:hover{color: #3c4a90;}
     </style>
     <script>
         $(function(){
@@ -200,7 +207,7 @@
         <div id="tblSM">
             <b id="listSearch">List of students for selected parameters:</b>
             <table id="tblSI">
-                <tr>
+                <tr class="trUI">
                     <th>&nbsp;</th>
                     <th class="title">Lastname</th>
                     <th class="title">Firstname</th>
@@ -209,13 +216,13 @@
                     <th class="title">Sex</th>
                 </tr>
                 <c:forEach var="student" items="${form.students}">
-                    <tr>
-                        <td><input class="rdBtn" type="radio" name="studentId" value="${student.studentId}"></td>
-                        <td><c:out value="${student.firstName}"/></td>
-                        <td><c:out value="${student.surName}"/></td>
-                        <td><c:out value="${student.patronymic}"/></td>
-                        <td><c:out value="${student.dateOfBirth}"/></td>
-                        <td><c:out value="${student.sex}"/></td>
+                    <tr class="trUI">
+                        <td class="tdUI"><input class="rdBtn" type="radio" name="studentId" value="${student.studentId}"></td>
+                        <td class="tdUI"><c:out value="${student.firstName}"/></td>
+                        <td class="tdUI"><c:out value="${student.surName}"/></td>
+                        <td class="tdUI"><c:out value="${student.patronymic}"/></td>
+                        <td class="tdUI"><c:out value="${student.dateOfBirth}"/></td>
+                        <td class="tdUI"><c:out value="${student.sex}"/></td>
                     </tr>
                 </c:forEach>
             </table>
@@ -251,7 +258,7 @@
         <div id="tblGM">
             <b id="listGroups">List of all groups:</b>
             <table id="tblGI">
-                <tr>
+                <tr class="trUI">
                     <th>&nbsp;</th>
                     <th>Name</th>
                     <th>Curator</th>
@@ -259,12 +266,12 @@
                     <th>Haed spesiality</th>
                 </tr>
                 <c:forEach var="group" items="${form.groups}">
-                    <tr>
-                        <td><input class="rdBtnG" type="radio" name="grId" value="${group.groupId}"></td>
-                        <td><c:out value="${group.nameGroup}"/></td>
-                        <td><c:out value="${group.curator}"/></td>
-                        <td><c:out value="${group.speciality}"/></td>
-                        <td><c:out value="${group.speHead}"/></td>
+                    <tr class="trUI">
+                        <td class="tdUI"><input class="rdBtnG" type="radio" name="grId" value="${group.groupId}"></td>
+                        <td class="tdUI"><c:out value="${group.nameGroup}"/></td>
+                        <td class="tdUI"><c:out value="${group.curator}"/></td>
+                        <td class="tdUI"><c:out value="${group.speciality}"/></td>
+                        <td class="tdUI"><c:out value="${group.speHead}"/></td>
                     </tr>
                 </c:forEach>
             </table>
@@ -294,16 +301,16 @@
         <div id="tblDM">
             <b id="listDepartment">List of all departments:</b>
             <table id="tblDI">
-                <tr>
+                <tr class="trUI">
                     <th>&nbsp;</th>
                     <th class="title">Name</th>
                     <th class="title">Head</th>
                 </tr>
                 <c:forEach var="department" items="${form.departments}">
-                    <tr>
-                        <td><input class="rdBtnD" type="radio" name="dpId" value="${department.departmentId}"></td>
-                        <td><c:out value="${department.nameDept}"/></td>
-                        <td><c:out value="${department.head}"/></td>
+                    <tr class="trUI">
+                        <td class="tdUI"><input class="rdBtnD" type="radio" name="dpId" value="${department.departmentId}"></td>
+                        <td class="tdUI"><c:out value="${department.nameDept}"/></td>
+                        <td class="tdUI"><c:out value="${department.head}"/></td>
                     </tr>
                 </c:forEach>
             </table>

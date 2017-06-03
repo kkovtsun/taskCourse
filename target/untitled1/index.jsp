@@ -11,7 +11,8 @@
         #txt2{margin-left: 15px;cursor: pointer;}
         #txt3{cursor: pointer;
             height: 28px;margin-left: 96px;width: 130px;
-            border-color: blue;border-style: groove;}
+            border-color: #3d3fff;border-style: groove;}
+         #txt1:hover, #txt2:hover, #txt3:hover{border-color: #3e30cf;}
         #lblError{color: red;margin-left: 597px;font-size: 23px;}
         #btn{margin-left: 133px;}
         .lbl{font-size: 23px;margin-left: 38px;}

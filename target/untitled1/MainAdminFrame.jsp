@@ -15,34 +15,35 @@
             text-decoration: none;display: inline-block;
             font-size: 16px;border: 2px solid #3c4a90;
             background-color: #ffffff;cursor: pointer;}
-        #btnLogOut{margin-left: 1236px;margin-top: 9px;}
+        #btnLogOut{margin-left: 1254px;margin-top: 9px;}
         #listUsers{color: #221c70;font-size: 21px;margin-left: 77px;}
         #tblU{margin-left: 446px;}
-        #tblUI{margin-left: 5px;margin-top: 14px;}
+        #tblUI{margin-top: 14px;}
         #tblUM{margin-bottom:16px;margin-top: 16px;
             border-style: groove;background: white;
             width: 435px;margin-left: 15px;}
-        #btnAdd,#btnDel, #btnDelA{
+        #btnAdd, #btnDel, #btnDelA{
             color: black;padding: 3px 14px;text-align: center;
             text-decoration: none;display: inline-block;
             font-size: 16px;border: 2px solid #3c4a90;
             background-color: #ffffff;cursor: pointer;}
         #btnAdd:hover, #btnDel:hover, #btnDelA:hover{
             background-color: #3c4a90;color: white;}
-        .lblT{cursor: pointer;border: 2px solid #3c4a90;font-size: 15px;width: 145px;}
+        .lblT{margin-left:3px;cursor: pointer;border: 2px solid #9a9a9a;font-size: 15px;width: 145px;}
+        .lblT:hover{border-color:  #221c70;}
         #tblUModer{width: 92%;margin-left: 18px;border-color: #ece5e5;
             margin-top: 16px;margin-bottom: 5px;
             background: #fff5b2;border-style: groove;}
-        #btnDel{margin-left: 150px;margin-top: 5px;}
-        #btnDelA{margin-left: -10px;margin-top: 5px;}
-        #btnAdd{margin-left: 214px;}
+        #btnDel{margin-left: 145px; margin-top: 5px; margin-bottom: 5px;}
+        #btnDelA{margin-left: -51px;}
+        #btnAdd{margin-top: 4px; margin-left: 216px;}
         #lblN{margin-left: 60px;}
         #lblP{margin-left: 63px;}
         #lblS{margin-left: 85px;}
-        #btnDel:disabled, #btnDelA:disabled{
-            border-color: #c1bebe;
-            color: #7f7575;
-        }
+        #btnDel:disabled, #btnDelA:disabled{border-color: #3c4a90; color: rgba(127, 117, 117, 0.55)}
+        .thUI, .tdUI {text-align: left; padding: 3px;}
+        .trUI:nth-child(even){background-color: #f2f2f2}
+        .trUI:hover{color: #3c4a90;}
     </style>
     <script>
         $(function() {
@@ -57,8 +58,6 @@
                 $("#btnDelA").attr("disabled", false);
             });
         });
-
-
     </script>
 </head>
 <body>
@@ -70,26 +69,26 @@
         <div id="tblUM">
             <b id="listUsers">List of moderators and admins:</b>
             <table id="tblUI">
-                <tr>
+                <tr class="trUI">
                     <th>&nbsp;</th>
                     <th class="title">Username</th>
                     <th class="title">Password</th>
                     <th class="title">Status</th>
                 </tr>
                 <c:forEach var="moderator" items="${moderators}">
-                    <tr>
-                        <td><input class="rdBtnM" type="radio" name="id" value="${moderator.id}"></td>
-                        <td><c:out value="${moderator.username}"/></td>
-                        <td><c:out value="${moderator.password}"/></td>
-                        <td><c:out value="${moderator.status}"/></td>
+                    <tr class="trUI">
+                        <td class="tdUI"><input class="rdBtnM" type="radio" name="id" value="${moderator.id}"></td>
+                        <td class="tdUI"><c:out value="${moderator.username}"/></td>
+                        <td class="tdUI"><c:out value="${moderator.password}"/></td>
+                        <td class="tdUI"><c:out value="${moderator.status}"/></td>
                     </tr>
                 </c:forEach>
                 <c:forEach var="admin" items="${admins}">
-                    <tr>
-                        <td><input class="rdBtnA" type="radio" name="id" value="${admin.id}"></td>
-                        <td><c:out value="${admin.username}"/></td>
-                        <td><c:out value="${admin.password}"/></td>
-                        <td><c:out value="${admin.status}"/></td>
+                    <tr class="trUI">
+                        <td class="tdUI"><input class="rdBtnA" type="radio" name="id" value="${admin.id}"></td>
+                        <td class="tdUI"><c:out value="${admin.username}"/></td>
+                        <td class="tdUI"><c:out value="${admin.password}"/></td>
+                        <td class="tdUI"><c:out value="${admin.status}"/></td>
                     </tr>
                 </c:forEach>
             </table>

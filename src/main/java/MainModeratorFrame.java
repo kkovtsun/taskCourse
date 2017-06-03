@@ -14,7 +14,6 @@ import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 @WebServlet("/mainmoderator")
 public class MainModeratorFrame extends HttpServlet{
     private static final SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
@@ -29,9 +28,6 @@ public class MainModeratorFrame extends HttpServlet{
         } catch (Exception e) {
             e.printStackTrace();
         }
-        req.setAttribute("logIn", "");
-        req.setAttribute("logIn2", "");
-        req.setAttribute("logIn3", "");
         if (answer == 4) {
             try {
                 ManagementSystem.getInstance().logOut();
@@ -40,6 +36,9 @@ public class MainModeratorFrame extends HttpServlet{
                 e.printStackTrace();
             }
         }
+        req.setAttribute("logIn", "");
+        req.setAttribute("logIn2", "");
+        req.setAttribute("logIn3", "");
         String ds = req.getParameter("departmentId");
         String ys = req.getParameter("year");
         int departmentId = -1;
@@ -354,7 +353,7 @@ public class MainModeratorFrame extends HttpServlet{
         if (req.getParameter("MoveGroup") != null) {
             return 3;
         }
-        if (req.getParameter("logOutM") != null) {
+        if (req.getParameter("logOut") != null) {
             return 4;
         }
         if (req.getParameter("EditFinaly") != null) {
