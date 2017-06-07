@@ -35,13 +35,13 @@
         #btnSearch{margin-left: 148px;margin-top: -22px;}
         #divSearch{height: 45px;}
         #listSearch{color: #221c70;font-size: 21px;margin-left: 37px;}
-        #listGroups{color: #221c70;font-size: 21px;margin-left: 218px;}
+        #listGroups{color: #221c70;font-size: 21px;margin-left: 150px;}
         #listDepartment{color: #221c70;font-size: 21px;margin-left: 24px;}
         .title{font-size: 18px;color: rgb(22, 18, 74);}
         #tblS{width: 35%;float: left;}
         #tblSI{margin-left: 11px;margin-top: 14px;margin-bottom: 16px;}
         #tblG{float: left;width: 44%;}
-        #tblGI{margin-top: 14px; margin-left: 26px;margin-bottom: 16px;}
+        #tblGI{margin-top: 14px; margin-left: 55px;margin-bottom: 16px;}
         #tblD{float: left;width: 19%;}
         #tblDI{margin-left: 50px;margin-top: 13px;margin-bottom: 16px;}
         #tblSM{margin-bottom:16px;margin-top: 16px;
@@ -62,7 +62,7 @@
         <div id="divSearchC">
             <table>
             <tr>
-                <td><p id="yearSearch">Year:</p><input type="text" id="txtYearSearch" name="year" value="${form.year}"/><br/></td>
+                <td><p id="yearSearch">Year:</p><input type="number" id="txtYearSearch" name="year" value="${form.year}"/><br/></td>
                 <td><p id="deptSearch">Department list:</p>
                     <select id="txtDeprSearch" name="departmentId">
                         <c:forEach var="department" items="${form.departments}">
@@ -120,7 +120,7 @@
     </div>
     <div id="tblG">
         <div id="tblGM">
-            <b id="listGroups">List of all groups:</b>
+            <b id="listGroups">List of all groups by department:</b>
             <table id="tblGI">
             <tr>
                 <th class="title">Name</th>
